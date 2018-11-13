@@ -1,0 +1,134 @@
+@font-face {
+  font-family: CaviarDreams_Bold;
+  src: url(tipografias/CaviarDreams_Bold.ttf); }
+@font-face {
+  font-family: CaviarDreams;
+  src: url(tipografias/CaviarDreams.ttf); }
+@font-face {
+  font-family: Persippiny;
+  src: url(tipografias/Persippiny.otf); }
+@font-face {
+  font-family: PekKomikSans;
+  src: url(tipografias/PekKomikSans.ttf); }
+@font-face {
+  font-family: Fanwood;
+  src: url(tipografias/Fanwood.otf); }
+@font-face {
+  font-family: Boquern;
+  src: url(tipografias/Boquern.ttf); }
+@font-face {
+  font-family: Celeste_Hand;
+  src: url(tipografias/Celeste_Hand.ttf); }
+@font-face {
+  font-family: Casua;
+  src: url(tipografias/Casua.otf); }
+@font-face {
+  font-family: CasuaBold;
+  src: url(tipografias/CasuaBold.otf); }
+html, body, .ventana_registro_contenido {
+  height: 100%;
+  width: 100%;
+  margin: none;
+  padding: none; }
+
+.btn_login, .etiqueta, .btn_save_registro, .btn_close_registro {
+  cursor: pointer; }
+  .btn_login:hover, .etiqueta:hover, .btn_save_registro:hover, .btn_close_registro:hover {
+    transform: scale(1.02);
+    filter: brightness(115%); }
+  .btn_login:active, .etiqueta:active, .btn_save_registro:active, .btn_close_registro:active {
+    transform: scale(1); }
+
+body {
+  background-image: url("../img/login/fondo_01.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.campo_texto {
+  font-size: 1.4em;
+  padding-left: 2em; }
+
+.btn_login {
+  background-color: #FFC703;
+  color: #013978;
+  font-family: PekKomikSans;
+  font-size: 1.8em; }
+
+.etiqueta {
+  color: #013978;
+  font-family: PekKomikSans; }
+
+.cuadro_login {
+  background-color: rgba(20, 176, 224, 0.692);
+  border-radius: 40px;
+  box-shadow: 5px 5px 5px #252424; }
+
+.tittulo_login {
+  color: #013978;
+  font-family: PekKomikSans;
+  font-size: 2em; }
+
+.ventana_registro {
+  background-color: white !important; }
+
+.ventana_registro_contenido {
+  background-image: url(../img/login/fondo_01.svg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.titulo_ventana_registro {
+  color: #013978;
+  font-family: CaviarDreams;
+  font-size: 1.5em;
+  font-weight: bold; }
+
+.btn_save_registro {
+  background-color: #024d0e;
+  color: white;
+  font-family: PekKomikSans;
+  font-size: 1em; }
+
+.btn_close_registro {
+  background-color: #011103;
+  color: white;
+  font-family: PekKomikSans;
+  font-size: 1em; }
+
+.icono_user {
+  background-image: url(../img/login/Icono_User.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 1% 50%; }
+
+.icono_pass {
+  background-image: url(../img/login/Icono_Candado.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 1% 50%; }
+
+.icono_correo {
+  background-image: url(../img/login/Icono_mail.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 1% 50%; }
+
+.icono_telefono {
+  background-image: url(../img/login/Icono_telefono.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 1% 50%; }
+
+.icono_cuenta {
+  background-image: url(../img/login/x.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 1% 50%; }
+
+.icono_superior {
+  position: relative;
+  margin-top: -65px;
+  margin-bottom: 25px;
+  width: 90px;
+  height: 90px; }
+
+/*# sourceMappingURL=login.css.map */

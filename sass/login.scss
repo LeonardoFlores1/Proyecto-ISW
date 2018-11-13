@@ -1,0 +1,159 @@
+//IMPORTACIONES
+@import "variables";
+@import "tipografias";
+
+//EXTEND
+%full_altura_smp{
+    //altura de 100% sin margnes ni padding util para centrar en body
+    height: 100%;
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+%tipografia_login{
+    //se aplica a campos de texto y el boton de login
+    font-family:$tipografia_01;
+    font-size: 1.4em;
+}
+%efecto_boton{
+    //aunmenta la escala estar el cursor sobre el elemento y la disminuye al hacer clic, tambien cambia el cursor a una mano
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.02);
+        filter: brightness(115%);
+    }
+    &:active{
+        transform: scale(1);
+    }
+}
+
+//ESTILOS DE ELEMENTOS
+html{
+    @extend %full_altura_smp;
+}
+
+body{
+    @extend %full_altura_smp;
+    //background-color:$color_body;
+    background-image: url("../img/login/fondo_01.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.campo_texto{    
+    //@extend %tipografia_login;
+    //font-family: CaviarDreams_Bold;
+    font-size: 1.4em;
+    padding-left: 2em;    
+}
+
+
+.btn_login{
+    background-color: $color_boton_login;
+    color: $color_boton;
+    font-family:$tipografia_01;
+    @extend %efecto_boton;
+    font-size: 1.8em;   
+}
+
+.etiqueta{
+    color:$color_label;
+    font-family:$tipografia_01;
+    @extend %efecto_boton;    
+}
+
+.cuadro_login{
+    //border-style: solid;
+    // border-color: $borde_cuadro_login;
+    background-color:$color_cuadro_login;
+    border-radius: 40px;
+    //el primer dato se refire a posicion de la sombra en x el segundo valor en y el tercer valor define el difuminado >=0
+    //el cuarto valor define el color.
+    box-shadow: 5px 5px 5px $color_sombra_login;
+}
+
+.tittulo_login{
+    color:$color_titulo;
+    font-family:$tipografia_01;
+    font-size: 2em;
+}
+
+.ventana_registro{
+    //color de fondo de la cabecera y el pie de pagina de la ventana modal
+    background-color: white !important;
+}
+.ventana_registro_contenido{
+    //colo de fondo de en medio de la ventana modal
+    //background-color: $color_fondo_login !important;
+    @extend %full_altura_smp;
+    background-image: url(../img/login/fondo_01.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.titulo_ventana_registro{
+    color: $color_label;
+    font-family: $tipografia_04;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.btn_save_registro{
+    @extend %efecto_boton;
+    background-color: $color_boton_save_registro;
+    color: white;
+    font-family: $tipografia_01;
+    font-size: 1em;
+}
+
+.btn_close_registro{
+    @extend %efecto_boton;
+    background-color: $color_boton_close_registro;
+    color: white;
+    font-family: $tipografia_01;
+    font-size: 1em;
+}
+
+.icono_user{
+    background-image: url(../img/login/Icono_User.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 1% 50%;
+}
+
+.icono_pass{
+    background-image: url(../img/login/Icono_Candado.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;  
+    background-position: 1% 50%;
+}
+
+.icono_correo{
+    background-image: url(../img/login/Icono_mail.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;  
+    background-position: 1% 50%;
+}
+
+.icono_telefono{
+    background-image: url(../img/login/Icono_telefono.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;  
+    background-position: 1% 50%;
+}
+
+.icono_cuenta{
+    background-image: url(../img/login/x.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;  
+    background-position: 1% 50%;
+}
+.icono_superior{
+    position: relative;
+    margin-top: -65px;
+    margin-bottom: 25px;    
+    width: 90px;
+    height: 90px;    
+}
+
+
+
