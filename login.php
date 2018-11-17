@@ -24,7 +24,7 @@
     <div class="container align-self-center">
         <div class="row">            
             <div class="col-lg-3 col-md-1  col-sm-1"></div>         
-            <form class="col-lg-6 col-md-10 col-sm-10 cuadro_login p-4 m-1" id="form_login">
+            <form class="col-lg-6 col-md-10 col-sm-10 cuadro_login p-4 m-1 was-validated" id="form_login" >
                 <!-- Icono superior -->
                 <div class="row fila_absoluta">
                     <img class="icono_superior mx-auto col-12" src="img/login/Icono_User_superior.svg" alt="">
@@ -75,7 +75,7 @@
                     </button>
                 </div>
                 <!-- Contenedor de contenido (formularios y demas) -->
-                <form class="modal-body ventana_registro_contenido" enctype="multipart/form-data" id="formulario_registro" method="post">
+                <form class="modal-body ventana_registro_contenido was-validated" enctype="multipart/form-data" id="formulario_registro" method="post">
                      <!-- input de nombre y apellido -->
                     <div class="row input-group mx-auto">                        
                         <input class="col-10 form-control campo_texto mx-auto icono_user" type="text" placeholder="NOMBRE" id="txt_nombre_registro" name="txt_nombre_registro" maxlength="40" minlength="3" required>                    

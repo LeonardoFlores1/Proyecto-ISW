@@ -52,6 +52,7 @@
     </div>
 
     <div class="container bg-light mt-3 border">
+        <!-- Area de filtrado -->
         <div class="row mt-3 border bg-secondary text-light">
             <div class="col-lg-3 form-group">
                 <label for="">Titulo de libro:</label>
@@ -72,6 +73,7 @@
                 </span>  
             </div>
         </div>
+        <!-- Area de selects -->
         <div class="row mt-3">                   
             <!-- select LIBROS PARA COMPRAS -->
             <div class="col-lg-4">
@@ -167,7 +169,6 @@
     <script type="text/javascript">
           //para el visor de imagenes
         jQuery('#out-of-the-box-demo').slippry();
-
 
     </script>   
 </body>
