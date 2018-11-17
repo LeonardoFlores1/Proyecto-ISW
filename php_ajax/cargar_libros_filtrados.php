@@ -6,7 +6,21 @@
 	$lineas=Array();
 	$i=0;
 
-	$sql='SELECT l.id_libro, l.nombre, l.edicion FROM Libro as l WHERE l.id_usuario='.$ID_Usuario;	
+	$were = ''; 
+	
+	if ($_POST['titulo_filtrado'] != "") {
+		$were .= 'AND L.nombre  LIKE "%'.$_POST['titulo_filtrado'].'%" ';
+	}
+	if ($_POST['autor_filtrado'] != "") {
+		$were .= 'AND L.autor  LIKE "%'.$_POST['autor_filtrado'].'%" ';
+	}
+	if ($_POST['precio_filtrado'] != "") {
+		$were .= 'AND L.precio <='.$_POST['precio_filtrado'];
+	} 
+	
+
+	$sql='SELECT * FROM Libro AS L WHERE L.id_usuario <> '.$ID_Usuario.' AND L.id_estado = 1 '.$were;	
+
 	$consulta= mysqli_query($coneccion,$sql);
 	if ($consulta) {
 		while ($linea=mysqli_fetch_object($consulta)) {

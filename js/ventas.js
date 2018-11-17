@@ -8,7 +8,7 @@ $('#btn_guardar').click(function () {
 		var formData = new FormData(document.getElementById("formulario_venta"));
 		//formData.append("dato", "valor");
 		$.ajax({
-		    url: "php_ajax/ventas_agregar_libro.php",
+		    url: "php_ajax/agregar_libro.php",
 		    type: "post",
 		    dataType: "html",
 		    data: formData,

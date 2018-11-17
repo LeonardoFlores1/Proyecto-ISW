@@ -1,10 +1,15 @@
 <?php session_start(); ?>
-<?php include '../coneccion.php' ?>
+<?php 
+    include '../coneccion.php';
+     error_reporting(0);  
+?>
 
 <?php	
 	$lineas=Array();
 	$i=0;
-
+    //echo "<h5>".implode(",", $_POST['id_libro'])."</h5>";
+    //$id_libro = implode(",", $_POST['id_libro']);
+    
 	$sql='SELECT * FROM Libro as l WHERE id_libro='.$_POST['id_libro'];	
 	$consulta= mysqli_query($coneccion,$sql);
 	if ($consulta) {
@@ -31,7 +36,7 @@
 		$ficheros  = scandir($directorio);
 		$l=0;
 		echo '<!-- Visor imagenes -->
-                    <div id="carouselExampleControls" class="carousel slide col-lg-4" data-ride="carousel">
+                    <div id="carrusel_compras" class="carousel slide col-lg-12" data-ride="carousel">
                         <div class="carousel-inner">';
 		foreach ($ficheros as $key => $value) {
 			$url = $directorio_i.'/'.$value;
@@ -48,21 +53,24 @@
 			}			
 			$l++;		
 		}
-
 		echo '			</div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carrusel_compras" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carrusel_compras" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>';
 
-
         echo '		<!-- Informacion de Libro -->
-        			<div class="col-lg-8">
+        			<div class="col-lg-12 mt-2">
+                        <div class="row">
+                            <h5 class="col-lg-6">Precio:</h5>
+                            <h6 class="col-lg-6 text-success">LPS.- '.$lineas[$i]->precio.'</h6>
+                        </div>
+                        <hr class="mx-0 my-1">
                         <div class="row">
                             <h5 class="col-lg-6">Nombre:</h5>
                             <h6 class="col-lg-6">'.$lineas[$i]->nombre.'</h6>
@@ -78,11 +86,7 @@
                             <h6 class="col-lg-6">'.$lineas[$i]->volumen.'</h6>
                         </div>
                         <hr class="mx-0 my-1">
-                        <div class="row">
-                            <h5 class="col-lg-6">Precio:</h5>
-                            <h6 class="col-lg-6 text-warning">LPS.- '.$lineas[$i]->precio.'</h6>
-                        </div>
-                        <hr class="mx-0 my-1">
+                        
                         <div class="row">
                             <h5 class="col-lg-6">Se intercambia:</h5>
                             <h6 class="col-lg-6 text-danger">'.$Intercambia.'</h6>

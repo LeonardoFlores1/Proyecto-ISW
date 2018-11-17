@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,aAAa;EACT,gBAAgB,EAAE,kBAAyB;;AAG/C,gBAAgB;EACZ,gBAAgB,EAAE,kBAAyB;;AAG/C,kBAAkB;EACjB,gBAAgB,EAAE,kBAAkB;EACpC,aAAa,EAAE,IAAI;;AAGpB,mBAAmB;EAClB,gBAAgB,EAAE,kBAAkB;EACpC,aAAa,EAAE,IAAI",
+"sources": ["../sass/ventas.scss"],
+"names": [],
+"file": "ventas.css"
+}

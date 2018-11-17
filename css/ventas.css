@@ -4,4 +4,12 @@
 .cuadro_detalles {
   background-color: #eff6f7 !important; }
 
+.contenedor_ventas {
+  background-color: #F3F5F5 !important;
+  border-radius: 15px; }
+
+.contenedor_compras {
+  background-color: #F5FDF6 !important;
+  border-radius: 15px; }
+
 /*# sourceMappingURL=ventas.css.map */
