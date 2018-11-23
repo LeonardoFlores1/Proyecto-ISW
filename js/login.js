@@ -15,7 +15,7 @@ $('#btn_login').click(function () {
 		})
 		    .done(function(res){
 				if (res == "1") {
-					location.href ="perfil.php";
+					location.href ="ventas.php";
 				} else {
 					document.getElementById("alerta_login").innerHTML=res;	
 				}		    	        
