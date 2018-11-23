@@ -3,7 +3,7 @@ function cargar_libros_filtrados() {
 	var formData = new FormData(document.getElementById("frm_filtrado"));
 	//formData.append("dato", "valor");
 	$.ajax({
-	    url: "php_ajax/cargar_libros_filtrados.php",
+	    url: "php_ajax/cargar_libros_filtrados_int.php",
 	    type: "post",
 	    dataType: "html",
 	    data: formData,
@@ -21,13 +21,12 @@ function cargar_libros_filtrados() {
 }
 
 function cargar_solicitudes() {
-	console.log("hola desde la funcion");
 	var datos = {
 		id_libro:"nada"
 	};
 	$.ajax({
 	    type: "POST",
-	    url: "php_ajax/cargar_solicitudes_compras.php",
+	    url: "php_ajax/cargar_solicitudes_intercambio.php",
 	    data: datos,	    
 	})
 	    .done(function(res){
@@ -72,12 +71,11 @@ $('#btn_guardar_solicitud').click(function () {
 	if (id_l>0) {
 		var datos = {
 			id_libro:String(id_l),
-			lugar:String($('#lugar').val()),
-			precio:String($('#precio_regateo').val())
+			lugar:String($('#lugar').val())
 		};
 		$.ajax({
 		    type: "POST",
-		    url: "php_ajax/agregar_solicitud_compra.php",
+		    url: "php_ajax/agregar_solicitud_intercambio.php",
 		    data: datos,	    
 		})
 		    .done(function(res){
@@ -106,7 +104,7 @@ $('#btn_eliminar_solicitud').click(function () {
 		};
 		$.ajax({
 		    type: "POST",
-		    url: "php_ajax/eliminar_solicitud_compra.php",
+		    url: "php_ajax/eliminar_solicitud_intercambio.php",
 		    data: datos,	    
 		})
 		    .done(function(res){
