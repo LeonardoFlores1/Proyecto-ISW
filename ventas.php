@@ -34,7 +34,7 @@
                         <a class="nav-link" href="#">Ventas/Compras</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="intercambio.php">Intercambiar_Libro</a>
+                        <a class="nav-link" href="intercambio.php">Intercambiar Libro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.php">Mi Perfil</a>
@@ -52,7 +52,7 @@
             <h4 class="text-center my-4 col-lg-12 text-uppercase">Libros Personales para Ventas o Intercambios</h4>   
             <!-- LISTADO DE MIS LIBROS -->
             <div class="col-lg-4 col-sm-12 border mx-auto cuadro_lista">
-                <h5 class="text-center mt-2">Mi libros para ventas.</h5>
+                <h5 class="text-center mt-2">Agrega tus libros para vender o intercambiar.</h5>
                 <div class="form-group col-sm-12">
                     <select multiple class="form-control" id="Lista_libros" size="7" onchange="mostrar_libro()">
                     </select>
@@ -60,11 +60,11 @@
                 <!--Botones agregar o quitar libros -->
                 <div class="row form-group mx-auto">
                     <span class="btn btn-success btn-md col-4" data-toggle="modal" data-target="#frmAgregarLibro">
-                        <span class="fas fa-book text-left iconos">&nbsp; &nbsp; + </span>
+                        <span class="fas fa-book text-left iconos">&nbsp; &nbsp; Agregar </span>
                     </span>
                     <div class="col-4"></div>
                     <span class="btn btn-warning btn-md col-4 align-self-end" data-toggle="modal" data-target="#frmEliminarLibro">
-                        <span class="fas fa-book text-left iconos">&nbsp; &nbsp; - </span>
+                        <span class="fas fa-book text-left iconos">&nbsp; &nbsp; Eliminar </span>
                     </span>
                 </div>  
             </div>            
@@ -131,7 +131,7 @@
         <!-- Area Compras -->
         <div class="container pb-4 my-3 w-100 mx-auto contenedor_compras border ">
              <div class="row">
-                 <h4 class="text-center mt-2 mb-0 col-lg-12 text-uppercase">Solicitudes de Compras</h4>
+                 <h4 class="text-center mt-2 mb-0 col-lg-12 text-uppercase">Libros disponibles para comprar</h4>
                  <hr>
              </div>
             <!-- Area de filtrado -->

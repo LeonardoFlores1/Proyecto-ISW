@@ -39,7 +39,7 @@
                         <a class="nav-link" href="ventas.php">Ventas/Compras</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="intercambio.php">Intercambiar_Libro</a>
+                        <a class="nav-link" href="intercambio.php">Intercambiar Libro</a>
                     </li>
                     <li class="nav-item  active">
                         <a class="nav-link" href="perfil.php">Mi Perfil</a>

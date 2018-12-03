@@ -32,7 +32,7 @@
                         <a class="nav-link" href="ventas.php">Ventas/Compras</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="intercambio.php">Intercambiar_Libro</a>
+                        <a class="nav-link" href="intercambio.php">Intercambiar Libro</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="perfil.php">Mi Perfil</a>
@@ -67,7 +67,7 @@
         <div class="row mt-3">                   
             <!-- 01 compras -->
             <div class="col-lg-4">
-                <h5 class="text-center">Solicitudes de Comras</h5>
+                <h5 class="text-center">Solicitudes de Compras</h5>
                 <div class="form-group row">
                     <select class="col-lg-11 mx-auto form-control " multiple size="12"  id="lista_solicitudes_compras">                       
                     </select>
