@@ -1,6 +1,11 @@
+<?php session_start(); ?>
 <?php
     error_reporting(0);
     include 'BackEnd\comprobador_usuario.php';    
+?>
+
+ <?php
+    $conexion = mysqli_connect('localhost', 'root','','isw')
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -70,30 +75,45 @@
       
 		 <br>
       		<div class="row">
-       			 <div class = "col-md-3">
+       		 <div class = "col-md-3">
        			 	<img src="img/user.png" width = "250">
-       			 </div>
-       			 <div class = "col-md-3">
-       			 	<label>nombre:</label>
-              <hr>
-              <label>apellido:</label>
-              <hr>
-              <label>correo:</label>
-              <hr>
-              <label>telefono:</label>
-              <hr>
-              <label>direccion:</label>
-              <hr>
-
-       			 </div>
+       		 </div>
+       		 <div class = "col-md-3">
+               <?php
+                $ID_Usuario = $_SESSION['id_usuario'];
+                $sql = "SELECT * FROM usuario WHERE id_usuario = ".$ID_Usuario;
+                $result = mysqli_query($conexion, $sql);
+                while($mostrar = mysqli_fetch_array($result)){
+               ?>
+                <div class = "row">
+                    <h5>Nombre:<?php echo' ' . $mostrar['nombre']?></h5>
+                </div>
+                <hr>
+                <div class = "row">
+                    <h5>Correo:<?php echo ' ' .  $mostrar['correo']?></h5>
+                </div>
+                <hr>
+                <div class = "row">
+                    <h5>Telefono:<?php echo ' ' .  $mostrar['telefono']?></h5>
+                </div>
+                <hr>
+                <div class = "row">
+                    <h5>Cuenta:<?php echo ' ' .  $mostrar['no_cuenta']?></h5>
+                </div>
+                <hr>
+                <?php
+                }
+                mysqli_close($coneccion); 
+                ?>
+       		 </div>
              <div class = "col-md-3">
                
              </div>
        			 
-       			 <div class = "md-col-3">
-                  	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Editar</button>
+       		 <div class = "md-col-3">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Editar</button>
                                                     
-       			  </div>
+            </div>
       		</div>  
     </div>
     
